@@ -6,9 +6,10 @@ import {
   IonItem,
   IonAvatar,
   IonLabel,
-  IonRippleEffect
+  IonRippleEffect,
+  IonBadge
 } from "@ionic/react";
-import { data } from "../../resources/mockchats";
+import { data } from "../mockchats";
 
 const ThreadItem: React.FC = () => {
   return (
