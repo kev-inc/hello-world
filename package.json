@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "helloworldionic",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -47,5 +47,6 @@
   "devDependencies": {
     "@capacitor/cli": "2.4.1"
   },
-  "description": "An Ionic project"
+  "description": "",
+  "keywords": []
 }
