@@ -1,23 +1,29 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import React from "react";
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonList
+} from "@ionic/react";
+import ChatRoomItem from "../components/ChatRoomItem";
+import "./Tab2.css";
 
 const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Private Chats</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <IonList>
+          {["Avengers HQ", "SHIELD"].map((item, index) => (
+            <ChatRoomItem key={index} name={item} />
+          ))}
+        </IonList>
       </IonContent>
     </IonPage>
   );
