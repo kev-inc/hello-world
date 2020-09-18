@@ -13,10 +13,11 @@ import {
   IonInput,
   IonButton,
   IonIcon,
-  IonFooter
+  IonFooter,
+  IonBadge
 } from "@ionic/react";
 import { sendOutline } from "ionicons/icons";
-import { data } from "../../resources/mockchats";
+import { data } from "../mockchats";
 
 const ThreadPage: React.FC = () => {
   const [messages, setMessages] = useState(data);
