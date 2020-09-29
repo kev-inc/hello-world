@@ -35,6 +35,7 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 import ChatRoomPage from "./pages/ChatRoomPage";
 import ThreadPage from "./pages/ThreadPage";
+import CreateNewGroupPage from "./pages/CreateNewGroupPage";
 
 const App: React.FC = () => (
   <IonApp>
@@ -46,6 +47,7 @@ const App: React.FC = () => (
           <Route path="/tab3" component={Tab3} />
           <Route path="/chatroom/:name" component={ChatRoomPage} />
           <Route path="/thread" component={ThreadPage} />
+          <Route path="/newgroup" component={CreateNewGroupPage} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -55,11 +57,11 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon icon={ellipse} />
-            <IonLabel>Private</IonLabel>
+            <IonLabel>Starred</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
-            <IonLabel>Contacts</IonLabel>
+            <IonLabel>People</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
