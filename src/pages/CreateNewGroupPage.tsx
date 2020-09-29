@@ -10,8 +10,9 @@ import {
   IonInput,
   IonButton
 } from "@ionic/react";
+import { RouteComponentProps } from "react-router-dom";
 
-const CreateNewGroupPage: React.FC = ({ history }) => {
+const CreateNewGroupPage: React.FC<RouteComponentProps> = ({ history }) => {
   const [name, setName] = useState("");
 
   const createRoom = () => {
