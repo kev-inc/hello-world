@@ -9,9 +9,10 @@ import {
   IonBackButton,
   IonFab,
   IonFabButton,
-  IonIcon
+  IonIcon,
+  IonButton
 } from "@ionic/react";
-import { add } from "ionicons/icons";
+import { add, star } from "ionicons/icons";
 import { RouteComponentProps } from "react-router";
 import ThreadItem from "../components/ThreadItem";
 
@@ -29,6 +30,11 @@ const ChatRoomPage: React.FC<ChatRoomPageProps> = ({ match }) => {
             <IonBackButton defaultHref="/" />
           </IonButtons>
           <IonTitle>{match.params.name}</IonTitle>
+          <IonButtons slot="secondary">
+            <IonButton fill="clear">
+              <IonIcon slot="start" icon={star} />
+            </IonButton>
+          </IonButtons>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

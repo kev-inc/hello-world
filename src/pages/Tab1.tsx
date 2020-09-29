@@ -5,9 +5,13 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonList
+  IonList,
+  IonFab,
+  IonFabButton,
+  IonIcon
 } from "@ionic/react";
 import ChatRoomItem from "../components/ChatRoomItem";
+import { add } from "ionicons/icons";
 import "./Tab1.css";
 
 const Tab1: React.FC = () => {
@@ -15,7 +19,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Public Chats</IonTitle>
+          <IonTitle>Public Groups</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -24,6 +28,11 @@ const Tab1: React.FC = () => {
             <ChatRoomItem key={index} name={item} />
           ))}
         </IonList>
+        <IonFab vertical="bottom" horizontal="end" slot="fixed">
+          <IonFabButton routerLink="/newgroup" routerDirection="forward">
+            <IonIcon icon={add} />
+          </IonFabButton>
+        </IonFab>
       </IonContent>
     </IonPage>
   );
